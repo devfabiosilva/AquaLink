@@ -47,6 +47,35 @@ Essas camadas de segurança garantem operação confiável mesmo em redes instá
 - **Nuvem:** dashboards e notificações
 - **Conexão:** satélite (Starlink/Viasat)
 
+```text
+         ┌────────────────────┐
+         │   Sensores de Nível│
+         │   Pressão e Vazão  │
+         └──────────┬─────────┘
+                    │
+                    ▼
+            ┌────────────────┐
+            │      CLP       │
+            │ (Controle Local│
+            │ e Segurança)   │
+            └───────┬────────┘
+                    │ Modbus TCP
+                    ▼
+          ┌────────────────────┐
+          │     Gateway IoT    │
+          │     (MQTT + SSL)   │
+          └───────┬────────────┘
+                  │
+                  ▼
+        🌐 Conexão via Satélite (Viasat / Starlink)
+                  │
+                  ▼
+         ┌────────────────────────────┐
+         │        Servidor Nuvem      │
+         │ Dashboards • API • Storage │
+         └────────────────────────────┘
+```
+
 ---
 
 ### 🛰 Tecnologias Utilizadas
@@ -70,5 +99,4 @@ Abra uma **issue** ou envie um **pull request** com melhorias, documentação ou
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
-
 
