@@ -75,7 +75,7 @@ These layers ensure reliable and tamper-proof operation even over unstable satel
          │ Dashboards • API • Storage  │
          └─────────────────────────────┘
 
-``
+```
 ---
 
 ### 🛰 Technologies
