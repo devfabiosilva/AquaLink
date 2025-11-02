@@ -1,6 +1,5 @@
 # 💧 AquaLink — Automação e Monitoramento Remoto de Poços Artesianos
-
-> 🌎 *Bringing water to remote communities through open technology.*  
+ 
 > 💡 *Levando água a comunidades isoladas com tecnologia aberta.*
 
 ![Status](https://img.shields.io/badge/Project_Status-Active-brightgreen)
@@ -51,9 +50,9 @@ Essas camadas de segurança garantem operação confiável mesmo em redes instá
 ---
 
 ### 🛰 Tecnologias Utilizadas
-- CLP com lógica
+- CLP com lógica Ladder
 - C, Python 3 e Java para assinatura e 2FA
-- MBEDTLS
+- mbedTLS
 - Gateway Linux embarcado (Yocto/Debian)  
 - Broker MQTT
 - Banco de dados e dashboard web (Grafana, Node-RED ou custom)  
