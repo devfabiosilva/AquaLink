@@ -11,7 +11,9 @@
 
 ## 🇺🇸 About the Project
 
-**AquaLink** is an **open-source** automation and remote monitoring system for artesian wells, designed to bring **efficiency, reliability, and connectivity**
+**AquaLink** is an **open-source** project for remote automation and monitoring of artesian wells, designed to deliver **efficiency, reliability, and connectivity**.
+
+The system provides secure control, IoT communication, and autonomous operation for artesian well installations located in remote areas.
 
 It combines:
 - **Industrial PLC** for automation and well protection  
@@ -42,7 +44,7 @@ These layers ensure reliable and tamper-proof operation even over unstable satel
 ---
 
 ### 🧩 Architecture
-- **Hardware:** PLC + level, pressuresensors
+- **Hardware:** PLC + level, pressure sensors
 - **IoT Gateway:** Modbus, MQTT communication  
 - **Cloud:** dashboards and alerts
 - **Connectivity:** satellite (Starlink/Viasat)

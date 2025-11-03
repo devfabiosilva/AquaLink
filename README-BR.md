@@ -1,4 +1,4 @@
-# 💧 AquaLink — Automação e Monitoramento Remoto de Poços Artesianos
+# 💧 AquaLink — Sistema de automação e monitoramento remoto de poços artesianos
  
 > 💡 *Levando água a comunidades isoladas com tecnologia aberta.*
 
@@ -12,6 +12,8 @@
 ## 🇧🇷 Sobre o Projeto
 
 **AquaLink** é um projeto **open source** de automação e monitoramento remoto de poços artesianos, criado para levar **eficiência, confiabilidade e conectividade**.
+
+O sistema foi projetado para oferecer controle seguro, comunicação IoT e operação autônoma em instalações de poços artesianos localizadas em áreas remotas
 
 O sistema combina:
 - **CLP industrial** para automação e proteção do poço
