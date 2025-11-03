@@ -1,0 +1,14 @@
+*.iml
+.idea
+.project
+.settings
+.classpath
+target
+.npmrc
+.directory
+*.bundle.js
+nbproject
+yarn-error.log
+public
+dockerdata
+

@@ -1,0 +1,5 @@
+
+class AutomationControlError(Exception):
+    MB_ERROR_CODE_RESERVOIR_SENSOR_ERR = -1
+    MB_ERROR_CODE_RESERVOIR_OVERFLOW = -2
+    MB_ERROR_SUCCESS = 0
