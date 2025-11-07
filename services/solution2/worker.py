@@ -173,7 +173,7 @@ def on_message(client, userdata, msg):
         valid_totp = is_valid_TOTP(valid_format_value)
     except BaseException as e:
         if (debug):
-            print("Exception @ is_valid_TOTP with message: " + str(e.args[0]))
+            print("Exception @ is_valid_TOTP with message: " + str(e))
 
         client.publish(eventTopic, "{\"" + commandFault + "\":\"Validate Auth TOTP error. " + e.args[0] + "\"}")
         threadLock.release()
@@ -430,13 +430,21 @@ class BrokerClient(threading.Thread):
 
         threadLock.acquire()
 
+
         client = mqtt.Client(client_id=self.clientId, clean_session=True, userdata=None, protocol=mqtt.MQTTv311, transport="tcp")
-        client.tls_set(
-            ca_certs="../../security/cli/ca.crt",
-            certfile="../../security/cli/endpoint.crt",
-            keyfile="../../security/cli/endpoint.key",
-            tls_version=ssl.PROTOCOL_TLSv1_2
-        )
+
+        try:
+            client.tls_set(
+                ca_certs="../../security/cli/ca.crt",
+                certfile="../../security/cli/endpoint.crt",
+                keyfile="../../security/cli/endpoint.key",
+                tls_version=ssl.PROTOCOL_TLSv1_2
+            )
+        except BaseException as e:
+            threadLock.release()
+            print("Unable to load MQTT TLS client certificates. Abort", str(e))
+            return
+
         client.tls_insecure_set(True) # For test only. Never use this in real world
         client.on_connect = on_connect
         client.on_disconnect = on_disconnect
