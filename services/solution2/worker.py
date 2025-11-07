@@ -171,9 +171,9 @@ def on_message(client, userdata, msg):
 
     try:
         valid_totp = is_valid_TOTP(valid_format_value)
-    except:
+    except BaseException as e:
         if (debug):
-            print("Exception @ is_valid_TOTP with message: " + e.args[0])
+            print("Exception @ is_valid_TOTP with message: " + str(e.args[0]))
 
         client.publish(eventTopic, "{\"" + commandFault + "\":\"Validate Auth TOTP error. " + e.args[0] + "\"}")
         threadLock.release()
